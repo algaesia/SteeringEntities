@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ABF92989-9C36-4775-B141-84AA53B878A5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SteeringEntities</RootNamespace>
+    <AssemblyName>SteeringEntities</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\WindowsGL\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\WindowsGL\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AudioManager.cs" />
+    <Compile Include="Behaving Enemies\Avoider.cs" />
+    <Compile Include="Behaving Enemies\ChaseHideEnemy.cs" />
+    <Compile Include="Behaving Enemies\Chaser.cs" />
+    <Compile Include="Base Behaviours\Flock.cs" />
+    <Compile Include="Behaving Enemies\RandomWalker.cs" />
+    <Compile Include="BehaviourTree.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="Class Hierarchy\AnimatedEntity.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="Cryptorandom.cs" />
+    <Compile Include="Class Hierarchy\DrawableEntity.cs" />
+    <Compile Include="DrawnCharacter.cs" />
+    <Compile Include="DrawnCharacterSpawner.cs" />
+    <Compile Include="Edge.cs" />
+    <Compile Include="Class Hierarchy\Enemy.cs" />
+    <Compile Include="Class Hierarchy\Entity.cs" />
+    <Compile Include="Base Behaviours\Evade.cs" />
+    <Compile Include="Behaving Enemies\Explorer.cs" />
+    <Compile Include="Base Behaviours\Flee.cs" />
+    <Compile Include="Emitter.cs" />
+    <Compile Include="FlockingEntities.cs" />
+    <Compile Include="Game States\AudioState.cs" />
+    <Compile Include="Game States\CameraGameState.cs" />
+    <Compile Include="Game States\MatrixState.cs" />
+    <Compile Include="Game States\PauseGameState.cs" />
+    <Compile Include="Game States\RandomWalkerState.cs" />
+    <Compile Include="Game States\RogueLikeState.cs" />
+    <Compile Include="Game States\RoomState.cs" />
+    <Compile Include="Game States\TestingShadersState.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Game States\GameStateManager.cs" />
+    <Compile Include="Graph.cs" />
+    <Compile Include="Game States\FlockingState.cs" />
+    <Compile Include="InputHandler.cs" />
+    <Compile Include="Class Hierarchy\MovableEntity.cs" />
+    <Compile Include="LevelManager.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="Behaving Enemies\PathFollower.cs" />
+    <Compile Include="Game States\PathfindingState.cs" />
+    <Compile Include="Obstacle.cs" />
+    <Compile Include="PerlinNoise.cs" />
+    <Compile Include="Class Hierarchy\Player.cs" />
+    <Compile Include="Behaving Enemies\PointAndClickPathFollower.cs" />
+    <Compile Include="Game States\PointAndClickState.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Class Hierarchy\Projectile.cs" />
+    <Compile Include="ProjectileManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Base Behaviours\Pursue.cs" />
+    <Compile Include="Base Behaviours\Seek.cs" />
+    <Compile Include="Base Behaviours\SteeringBehaviour.cs" />
+    <Compile Include="Base Behaviours\Wander.cs" />
+    <Compile Include="Game States\ShootingGameState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="OpenTK">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\WindowsGL\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\WindowsGL\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Lidgren.Network">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\WindowsGL\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="RuminateGuiMonoGame">
+      <HintPath>.\RuminateGuiMonoGame.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.Sdl">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\WindowsGL\Tao.Sdl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\2048.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\animatedColours1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\animatedColours2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\animatedColours3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\animatedColours4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\animatedColours5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\blackSquare.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\blankSquare.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\costs.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\costs_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\costs_3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Explosion.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\FCPREMIX.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\GreySkin\ImageMap.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\GreySkin\Map.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\GreySkin\Metrics.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\GreySkin\Texture.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\kefka_cropped.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sidewinder.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\smoke.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icon.ico" />
+    <Content Include="SDL.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Content\blurShader.mgfxo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Content\FCPREMIX.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Content\Sidewinder.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Content\spriteFont.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\SpriteFont1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
